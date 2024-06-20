@@ -1,11 +1,9 @@
 import {useState} from "react";
-import {TouchableOpacity, View} from "react-native";
+import {Image, TouchableOpacity, View} from "react-native";
 import {TextLogo} from "@/components/logo";
-import {StaticCustomButton} from "@/components/button";
-import {Link} from "expo-router";
 import {AuthMobileMenu} from "@/app/components/mobile-menu";
 // @ts-ignore
-import Menu from '@/assets/images/menu.svg';
+import Menu from '@/assets/images/menu.png';
 import {useRouter} from "expo-router";
 
 // @ts-ignore
@@ -26,9 +24,7 @@ export const AuthCustomHeader = ({children}) => {
                     <TouchableOpacity className={'flex md:hidden cursor-pointer'} onPress={() => {
                         setOpen(!open);
                     }}>
-                        <View className={'w-[20px] h-[20px]'}>
-                            <Menu />
-                        </View>
+                        <Image source={Menu} className={'w-[20px] h-[20px]'} />
                     </TouchableOpacity>
 
                 </View>

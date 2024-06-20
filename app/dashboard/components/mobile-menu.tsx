@@ -1,7 +1,7 @@
 import {useRouter} from "expo-router";
-import {TouchableOpacity, View} from "react-native";
+import {Image, TouchableOpacity, View} from "react-native";
 //@ts-ignore
-import Back from '@/assets/images/back.svg'
+import Back from '@/assets/images/back.png'
 import {TextLogo} from "@/components/logo";
 import {StaticCustomButton} from "@/components/button";
 import {logout} from "@/server/acquisition";
@@ -19,9 +19,7 @@ export const DashboardMobileMenu = (props:any) => {
                     className="flex items-center justify-center mt-20"
                     onPress={() => props.setOpen(false)}
                 >
-                    <View className={'w-[50px] h-[50px]'}>
-                        <Back/>
-                    </View>
+                    <Image source={Back} className={'w-[50px] h-[50px]'} />
                 </TouchableOpacity>
 
                 <TextLogo/>

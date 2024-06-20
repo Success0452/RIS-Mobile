@@ -1,7 +1,7 @@
 import {useRouter} from "expo-router";
 //@ts-ignore
-import Menu from '@/assets/images/menu.svg';
-import {Text, TouchableOpacity, View} from "react-native";
+import Menu from '@/assets/images/menu.png';
+import {Image, Text, TouchableOpacity, View} from "react-native";
 import {TextLogo} from "@/components/logo";
 
 export const SideMenuHeader = (props:any) => {
@@ -14,9 +14,7 @@ export const SideMenuHeader = (props:any) => {
             <TouchableOpacity className={'flex md:hidden cursor-pointer'} onPress={() => {
                 props.setOpen(!props.open);
             }}>
-                <View className={'w-[20px] h-[20px]'}>
-                    <Menu />
-                </View>
+                <Image source={Menu} className={'w-[20px] h-[20px]'} />
             </TouchableOpacity>
         </View>
     )

@@ -1,7 +1,7 @@
-import {Text, TouchableOpacity, View} from "react-native";
+import {Image, Text, TouchableOpacity, View} from "react-native";
 import {useRouter} from "expo-router";
 //@ts-ignore
-import Back from '@/assets/images/back.svg'
+import Back from '@/assets/images/back.png'
 
 export const CreateProductHeader = (props:any) => {
     const router = useRouter();
@@ -11,9 +11,7 @@ export const CreateProductHeader = (props:any) => {
             <TouchableOpacity className={"cursor-pointer"} onPress={() => {
                 router.back();
             }}>
-                <View className={'w-[40px] h-[40px]'}>
-                    <Back />
-                </View>
+                <Image source={Back} className={'w-[40px] h-[40px]'} />
             </TouchableOpacity>
         </View>
     )

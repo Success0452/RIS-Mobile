@@ -1,9 +1,9 @@
 import {StaticCustomButton} from "@/components/button";
 import {Link, useRouter} from "expo-router";
 import {TextLogo} from "@/components/logo";
-import {TouchableOpacity, View} from "react-native";
+import {Image, TouchableOpacity, View} from "react-native";
 // @ts-ignore
-import Back from '@/assets/images/back.svg';
+import Back from '@/assets/images/back.png';
 
 export const AuthMobileMenu = (props:any) => {
     const router = useRouter();
@@ -14,7 +14,7 @@ export const AuthMobileMenu = (props:any) => {
                 className="w-[50px] h-[50px] rounded-full mt-10 flex items-center justify-center"
                 onPress={() => props.setOpen(false)}
             >
-                <Back />
+                <Image source={Back} className={'w-[50px] h-[50px]'} />
             </TouchableOpacity>
 
             <TextLogo />
