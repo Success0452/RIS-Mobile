@@ -21,7 +21,6 @@ export default function ProductPage() {
         if(allCategories?.statusCode === 200){
             // @ts-ignore
             const category = allCategories?.data;
-            console.log(category, 'category');
             setCategories(category);
             setFilteredList(category);
         }
